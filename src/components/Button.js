@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/ButtonStyles.css';
 
 const Button = ({buttonFn, num, text}) => {
     
     return (
-        <div>
+        <div className='botoncito'>
             <button onClick={() => buttonFn(num)}>{text}</button>
         </div>
     );

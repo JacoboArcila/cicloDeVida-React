@@ -1,14 +1,20 @@
 import React from 'react';
+import '../styles/CardStyles.css';
 
-const Card = ({img}) => {
+const Card = ({img, incrementId, text, name}) => {
     return (
-        <div>
-            <h1>Componente clase</h1>
-                <div>
+        <div className="card">
+            <h1>{text}</h1>
+            <div className='card-body'>
+                <div className='card-img'>
                     <img src={img} alt="" />
                 </div>
-                <button onClick={() => this.incrementId("prev")} >Prev</button> 
-                <button onClick={() => this.incrementId("next")} >Next</button> 
+                <div className='card-footer'>
+                    <h3>{name}</h3>
+                    <button className="card-button" onClick={() => incrementId("prev")} >Prev</button> 
+                    <button className="card-button"  onClick={() => incrementId("next")} >Next</button> 
+                </div>
+            </div>
         </div>
     );
 }

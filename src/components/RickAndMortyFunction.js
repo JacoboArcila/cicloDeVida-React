@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Card from './Card.js';
 
 const RickAndMortyFunction = () => {
     const [data, setData] = useState({});
@@ -27,13 +28,7 @@ const RickAndMortyFunction = () => {
     
     return (
         <div className="funcion">
-            <h1>Componente funcion</h1>
-                <div>
-                    <img src={data.image} alt="" />
-                </div>
-                <button onClick={() => incrementId("prev")} >Prev</button> 
-                <button onClick={() => incrementId("next")} >Next</button>
-
+            <Card name={data.name} img={data.image} incrementId={incrementId} text="Componente Funcion" />
         </div>
     );
 }

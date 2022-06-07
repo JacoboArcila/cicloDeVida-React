@@ -25,10 +25,10 @@ function App() {
 
   return (
     <div className="App">
-      <Button buttonFn={changeView} num={count} text={text} />
       {
         view
       }
+      <Button buttonFn={changeView} num={count} text={text} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Component } from 'react';
-
+import Card from './Card.js';
 class RickAndMortyClass extends Component {
     constructor() {
         super();
@@ -45,13 +45,7 @@ class RickAndMortyClass extends Component {
     render() {
         return(
             <div className={this.props.nameClass}>
-                 <h1>Componente clase</h1>
-                <div>
-                    <img src={this.state.data.image} alt="" />
-                </div>
-                <button onClick={() => this.incrementId("prev")} >Prev</button> 
-                <button onClick={() => this.incrementId("next")} >Next</button> 
-
+                <Card name={this.state.data.name} img={this.state.data.image} incrementId={this.incrementId} text="Componente Clase" />
             </div>
         )
     }

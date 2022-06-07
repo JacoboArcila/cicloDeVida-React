@@ -1,0 +1,22 @@
+.botoncito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoncito button {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 200px;
+    width: 800px;
+    height: 100px;
+    margin: 20px;
+    background-image: linear-gradient(55deg, #cefaf7 0, #baf2f2 12.5%, #a5e9ee 25%, #8ddfea 37.5%, #71d4e7 50%, #51c9e5 62.5%, #27bee3 75%, #00b4e3 87.5%, #00abe3 100%);
+}
+
+.botoncito button:hover {
+    transition:all .5s ease-in-out;
+    cursor: pointer;
+    filter: opacity(.5);
+}
