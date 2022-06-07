@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import ButtonChange from './ButtonChange';
 
 class RickAndMortyClass extends Component {
     constructor() {
@@ -53,7 +52,6 @@ class RickAndMortyClass extends Component {
                 <button onClick={() => this.incrementId("prev")} >Prev</button> 
                 <button onClick={() => this.incrementId("next")} >Next</button> 
 
-                <ButtonChange text="Go to function component"/>
             </div>
         )
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import ButtonChange from './ButtonChange';
 
 const RickAndMortyFunction = () => {
     const [data, setData] = useState({});
@@ -35,7 +34,6 @@ const RickAndMortyFunction = () => {
                 <button onClick={() => incrementId("prev")} >Prev</button> 
                 <button onClick={() => incrementId("next")} >Next</button>
 
-                <ButtonChange text="Go to class component"/>
         </div>
     );
 }
