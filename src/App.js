@@ -3,23 +3,22 @@ import RickAndMortyClass from './components/RickAndMortyClass';
 import RickAndMortyFunction from './components/RickAndMortyFunction';
 import './styles/viewStyles.css';
 import {useState} from 'react';
-import Button from './components/Button';
+import './styles/ButtonStyles.css';
 
 function App() {
   const [view, setView] = useState();
   const [count, setCount] = useState(1);
-  const [text, setText] = useState("Go to Class Component");
+  const [text, setTexto] = useState("Go to Class Component");
 
   const changeView = (num) => {
-
     if(num === 1) {
       setView(<RickAndMortyClass />)
       setCount(prevState => prevState + 1)
-      setText("Go to Funtion Component")
+      setTexto("Go to Funtion Component")
     } else if( num === 2) {
       setView(<RickAndMortyFunction />)
       setCount(prevState => prevState - 1)
-      setText("Go to Class Component")
+      setTexto("Go to Class Component")
     }
   }
 
@@ -28,7 +27,9 @@ function App() {
       {
         view
       }
-      <Button buttonFn={changeView} num={count} text={text} />
+      <div className='botoncito'>
+        <button onClick={() => changeView(count)}>{text}</button>
+      </div>
     </div>
   );
 }
